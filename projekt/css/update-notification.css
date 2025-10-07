@@ -1,0 +1,101 @@
+/* Update notification banner - PWA */
+
+#updateNotification {
+    position: fixed;
+    top: var(--space-5);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: var(--z-notification);
+    animation: slideDownBanner var(--transition-slow) ease-out;
+}
+
+@keyframes slideDownBanner {
+    from { 
+        transform: translate(-50%, -100px); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translate(-50%, 0); 
+        opacity: 1; 
+    }
+}
+
+.update-banner {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+    color: var(--color-white);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.update-banner button {
+    background: var(--color-white);
+    color: var(--color-accent);
+    border: none;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: 14px;
+    white-space: nowrap;
+    font-family: var(--font-family-base);
+}
+
+.update-banner button:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+#dismissBtn {
+    background: rgba(255,255,255,0.2) !important;
+    color: var(--color-white) !important;
+}
+
+#dismissBtn:hover {
+    background: rgba(255,255,255,0.3) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .update-banner {
+        padding: var(--space-3) var(--space-4);
+        font-size: 13px;
+        flex-wrap: wrap;
+        max-width: 90vw;
+    }
+    
+    .update-banner button {
+        padding: var(--space-2) var(--space-3);
+        font-size: 13px;
+    }
+}
+
+/* Install prompt */
+.install-prompt {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.install-btn {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+    transition: all 0.2s;
+}
+
+.install-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+}
