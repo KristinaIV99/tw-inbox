@@ -1,0 +1,97 @@
+/* projekt/css/description-card.css */
+/* TaskWarrior Composer - Description Card */
+
+/* ===== MILESTONE ROW CONTAINER ===== */
+.milestone-row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: var(--space-4);
+}
+
+/* ===== MILESTONE BUTTON - SUPAPRASTINTAS ===== */
+.milestone-btn {
+    background: var(--color-gray-700);
+    color: var(--color-white);
+    border: 2px solid var(--color-gray-600);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-4);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-family-base);
+    min-height: 36px;
+}
+
+.milestone-btn:hover {
+    background: var(--color-gray-600);
+    border-color: var(--color-gray-700);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+.milestone-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--focus-ring-color);
+}
+
+/* Active state - mėlyna */
+.milestone-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+}
+
+.milestone-btn.active:hover {
+    background: var(--color-primary-dark);
+    box-shadow: 0 6px 16px rgba(66, 153, 225, 0.5);
+}
+
+/* ===== DESCRIPTION TEXTAREA ===== */
+.description-textarea {
+    width: 100%;
+    min-height: 70px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: var(--space-4);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    font-size: 14px;
+    font-family: var(--font-family-base);
+    color: var(--color-gray-700);
+    background: var(--color-white);
+    transition: all var(--transition-normal);
+    resize: none;
+    line-height: 1.6;
+}
+
+.description-textarea::placeholder {
+    color: var(--color-gray-400);
+    font-style: italic;
+}
+
+.description-textarea:hover {
+    border-color: var(--color-gray-300);
+    box-shadow: 0 2px 8px rgba(66, 153, 225, 0.1);
+}
+
+.description-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--focus-ring-color);
+}
+
+/* ===== VALIDATION STATES ===== */
+.description-textarea.invalid {
+    border-color: var(--color-error);
+    background: rgba(245, 101, 101, 0.05);
+}
+
+.description-textarea.invalid:focus {
+    box-shadow: 0 0 0 3px rgba(245, 101, 101, 0.2);
+}
