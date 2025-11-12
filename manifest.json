@@ -1,0 +1,28 @@
+{
+  "name": "TaskWarrior Inbox",
+  "short_name": "Inbox",
+  "description": "Greitai kurkite TaskWarrior užduotis su anotacijomis",
+  "start_url": "/tw-inbox/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#764ba2",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "utilities"],
+  "lang": "lt",
+  "dir": "ltr",
+  "scope": "/tw-inbox/",
+  "icons": [
+    {
+      "src": "/tw-inbox/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/tw-inbox/icons/icon-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
